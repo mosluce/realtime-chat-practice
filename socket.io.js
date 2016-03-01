@@ -1,8 +1,8 @@
 module.exports = function (server) {
     var io = require('socket.io')(server);
-    var mongo = require('socket.io-adapter-mongo');
+    //var mongo = require('socket.io-adapter-mongo');
 
-    io.adapter(mongo('mongodb://localhost/play-chat'));
+    //io.adapter(mongo('mongodb://localhost/play-chat'));
 
     io.on('connection', function (socket) {
         socket.on('join', function(data) {
