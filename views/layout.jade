@@ -2,12 +2,15 @@ doctype html
 html
     head
         title= title
-    body(ng-app="app")
-        block content
+        link(rel="stylesheet", href="/bower/bootstrap/dist/css/bootstrap.min.css")
         script(src="/socket.io/socket.io.js")
         script(src="/bower/angular/angular.min.js")
         script.
             (function () {
                 var app = angular.module('app', []);
             })();
+    body(ng-app="app")
+        div.container
+            block content
+
         block scripts

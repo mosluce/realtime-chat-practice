@@ -5,14 +5,10 @@ module.exports = function (server) {
     //io.adapter(mongo('mongodb://localhost/play-chat'));
 
     io.on('connection', function (socket) {
-        socket.on('join', function(data) {
-            data.created_at = new Date();
-            socket.emit('join', data);
-        });
 
         socket.on('message', function(data) {
             data.created_at = new Date();
-            socket.emit('message', data);
+            io.emit('message', data);
         });
     });
 };
