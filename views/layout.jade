@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title= title
+    body(ng-app="app")
+        block content
+        script(src="/socket.io/socket.io.js")
+        script(src="/bower/angular/angular.min.js")
+        script.
+            (function () {
+                var app = angular.module('app', []);
+            })();
+        block scripts

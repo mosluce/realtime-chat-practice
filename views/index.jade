@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    div(ng-controller="ChatController")
+        div
+            form(name="form", ng-submit="send()", novalidate)
+                div
+                    input(ng-model="model.username")
+                div
+                    input(ng-model="model.content")
+                div
+                    button(type="submit") Send
+        hr
+        div(ng-repeat="message in messages track by $index")
+            span {{message.username}}:
+            span {{message.content}}|
+            span {{message.created_at | date:'yyyy/MM/dd HH:mm:ss'}}
+
+block scripts
+    script.
+        angular.module('app').controller('ChatController', ['$scope', '$filter', function ($scope, $filter) {
+            $scope.messages = [];
+            $scope.model = {};
+
+            var socket = io();
+
+            socket.on('join', function(data) {
+                $scope.$apply(function () {
+                    $scope.messages.unshift({
+                        username: 'System',
+                        content: data.username + ' joined at ' + $filter('date')(data.created_at, 'yyyy/MM/dd HH:mm:ss')
+                    });
+                });
+            });
+
+            socket.on('message', function(data) {
+                $scope.$apply(function() {
+                    $scope.messages.unshift(data);
+                });
+            });
+
+            $scope.send = function() {
+                socket.emit('join', $scope.model);
+                socket.emit('message', $scope.model);
+
+                $scope.model.content = null;
+            };
+
+
+        }]);
+
