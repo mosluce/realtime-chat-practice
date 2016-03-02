@@ -1,14 +1,12 @@
+var db = require('./libs/database');
+
 module.exports = function (server) {
     var io = require('socket.io')(server);
-    //var mongo = require('socket.io-adapter-mongo');
+    var mongo = require('socket.io-adapter-mongo');
 
-    //io.adapter(mongo('mongodb://localhost/play-chat'));
+    io.adapter(mongo(db.MongoURL));
 
     io.on('connection', function (socket) {
-
-        socket.on('message', function(data) {
-            data.created_at = new Date();
-            io.emit('message', data);
-        });
+        socket.emit('session', socket);
     });
 };

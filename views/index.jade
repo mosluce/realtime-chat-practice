@@ -1,42 +1,9 @@
 extends layout
 
 block content
-    div.row(ng-controller="ChatController", style="padding-top: 32px;")
-        div.col-sm-12
-            form(name="form", ng-submit="send()", novalidate)
-                div.form-group
-                    input.form-control(ng-model="model.username", placeholder="Name")
-                div.form-group
-                    input.form-control(ng-model="model.content", placeholder="Message...")
-                div.form-group
-                    button.btn.btn-default(type="submit") Send
-        div.col-sm-12
-            ul.list-group
-                li.list-group-item(ng-repeat="message in messages track by $index")
-                    span(style="margin-right: 4px;") {{message.username}} :
-                    span(style="margin-right: 4px;") {{message.content}} |
-                    span {{message.created_at | date:'yyyy/MM/dd HH:mm:ss'}}
+    div.row.
+        I am thinking...
 
 block scripts
-    script.
-        angular.module('app').controller('ChatController', ['$scope', '$filter', function ($scope, $filter) {
-            $scope.messages = [];
-            $scope.model = {};
 
-            var socket = io();
-
-            socket.on('message', function (data) {
-                $scope.$apply(function () {
-                    $scope.messages.unshift(data);
-                });
-            });
-
-            $scope.send = function () {
-                socket.emit('message', $scope.model);
-
-                $scope.model.content = null;
-            };
-
-
-        }]);
 
