@@ -8,28 +8,34 @@ block content
         //Login Form
         div.row.login-form(ng-show="!loggedIn")
             div.col-sm-4.col-sm-push-4
-                form(novalidate, name="form", ng-submit="login()")
+                form(novalidate, name="loginForm", ng-submit="login()")
+                    form-validation-label(message="requiredMessage", form="loginForm", field="username")
                     div.form-group.input-group
                         span.input-group-addon 帳號
-                        input.form-control(type="username", ng-model="model.username", placeholder="聊天用暱稱")
+                        input.form-control(type="username", ng-model="model.username", placeholder="聊天用暱稱", required, name="username")
+
+                    form-validation-label(message="requiredMessage", form="loginForm", field="password")
                     div.form-group.input-group
                         span.input-group-addon 密碼
-                        input.form-control(type="password", ng-model="model.password", placeholder="密碼")
+                        input.form-control(type="password", ng-model="model.password", placeholder="密碼", required, name="password")
+
                     div.form-group.clearfix
                         button.btn.btn-default.pull-right(type="submit") 登入
         //ChatView
         div.chat-wall(ng-show="loggedIn")
             div.message-pool
                 div.page-header
-                    div
+                    div.form-group
                         span.label.label-info 登入名稱: {{currentUsername}}
                     form(novalidate, name="messageForm", ng-submit="to()")
+                        form-validation-label(message="requiredMessage", form="messageForm", field="content")
                         div.form-group.input-group
                             span.input-group-addon 輸入訊息
-                            input.form-control(type="text", ng-model="messageData.content", required, placeholder="輸入訊息")
+                            input.form-control(type="text", ng-model="messageData.content", required, placeholder="輸入訊息", name="content")
                             span.input-group-btn
                                 button.btn.btn-default
                                     i.glyphicon.glyphicon-send
+
                         div.form-group.input-group
                             span.input-group-addon 密語對象
                             ui-select.form-group(ng-model="messageData.username")
@@ -46,7 +52,8 @@ block content
             div.user-pool
                 ul.list-group
                     li.list-group-item 線上使用者
-                    li.list-group-item(ng-repeat="user in users track by $index") {{user.username}}
+                    li.list-group-item(ng-repeat="user in users track by $index")
+                        a(href, ng-click="messageData.username=user.username") {{user.username}}
 
 
 
@@ -54,7 +61,20 @@ block content
 block scripts
     script.
         angular.module('app')
-                .controller('ChatCtrl', ['$scope', '$http', function ($scope, $http) {
+                .directive('formValidationLabel', [function() {
+                    return {
+                        restrict: 'E',
+                        replace: true,
+                        template: '<span class="label label-danger" ng-show="(form[field].$touched||form.$submitted)&&form[field].$error">{{message}}</span>',
+                        scope: {
+                            form: '=',
+                            field: '@',
+                            message: '='
+                        }
+                    }
+
+                }])
+                .controller('ChatCtrl', ['$scope', '$http', 'ngProgressFactory', function ($scope, $http, ngProgressFactory) {
                     var socket = io();
 
                     $scope.currentUsername = null;
@@ -63,15 +83,27 @@ block scripts
                     $scope.users = [];
                     $scope.messageData = {};
                     $scope.messages = [];
+                    $scope.loginForm = null;
+                    $scope.messageForm = null;
+                    $scope.requiredMessage = "必填";
+                    $scope.progress = ngProgressFactory.createInstance();
 
                     $scope.login = function () {
+                        if($scope.loginForm.$invalid) return;
+
+                        $scope.progress.start();
+
                         $http.post('/user/login', $scope.model)
                                 .then(function () {
+                                    $scope.progress.complete();
+
                                     $scope.loggedIn = true;
                                     $scope.join();
                                     $scope.currentUsername = $scope.model.username;
                                     $scope.model = {};
                                 }, function (e) {
+                                    $scope.progress.complete();
+
                                     alert(e.data.message);
                                 });
                     };
@@ -83,6 +115,8 @@ block scripts
                     };
 
                     $scope.to = function() {
+                        if($scope.loginForm.$invalid) return;
+
                         socket.emit('message', $scope.messageData);
 
                         $scope.messages.unshift({

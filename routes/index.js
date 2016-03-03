@@ -1,5 +1,8 @@
 var express = require('express');
 var router = express.Router();
+var bcrypt = require('bcrypt');
+
+var salt = 'JKldjasljdldaslkfdjdwslfjlwjlfjadzlksjflds';
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -9,22 +12,39 @@ router.get('/', function (req, res, next) {
 router.post('/user/login', function (req, res, next) {
     var data = req.body;
 
+    if(!data.username || !data.password) {
+        res.status(400);
+        res.send({
+            message: '輸入格式錯誤'
+        });
+        return;
+    }
+
     try {
         User.findOne({
             username: data.username
         }).exec().then(function (user) {
             if (user) {
-                if (user.password === data.password) {
-                    res.send({});
-                } else {
-                    res.status(400);
-                    res.send({
-                        message: '密碼錯誤'
-                    });
-                }
+                bcrypt.compare(data.password, user.password, function(err, result) {
+
+                    if(result) {
+                        res.send({});
+                    } else {
+                        res.status(400);
+                        res.send({
+                            message: '密碼錯誤'
+                        });
+                    }
+                });
             } else {
-                User.create(data).then(function () {
-                    res.send({});
+                bcrypt.genSalt(8, function(err, salt) {
+                    bcrypt.hash(data.password, salt, function(err, hash) {
+                        data.password = hash;
+
+                        User.create(data).then(function () {
+                            res.send({});
+                        });
+                    });
                 });
             }
         });

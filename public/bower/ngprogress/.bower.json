@@ -1,0 +1,31 @@
+{
+  "name": "ngprogress",
+  "version": "1.1.2",
+  "main": [
+    "build/ngProgress.js",
+    "ngProgress.css"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "Gruntfile.js",
+    "package.json",
+    "karma.conf.js",
+    "index.html"
+  ],
+  "homepage": "https://github.com/VictorBjelkholm/ngProgress",
+  "_release": "1.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.2",
+    "commit": "db88034a70943f6caa9232c025d9f4f3e04c5f27"
+  },
+  "_source": "git://github.com/VictorBjelkholm/ngProgress.git",
+  "_target": "^1.1.2",
+  "_originalSource": "ngprogress",
+  "_direct": true
+}
