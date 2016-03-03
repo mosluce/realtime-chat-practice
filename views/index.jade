@@ -27,6 +27,7 @@ block content
                 div.page-header
                     div.form-group
                         span.label.label-info 登入名稱: {{currentUsername}}
+                    //輸入訊息表單
                     form(novalidate, name="messageForm", ng-submit="to()")
                         form-validation-label(message="requiredMessage", form="messageForm", field="content")
                         div.form-group.input-group
@@ -41,31 +42,29 @@ block content
                             ui-select.form-group(ng-model="messageData.username")
                                 ui-select-match(allow-clear="true", placeholder="選擇對話對象") {{$select.selected.username}}
                                 ui-select-choices(repeat="user.username as user in users") {{user.username}}
-
+                //訊息列
                 div.message-box
                     ul.list-group
                         li.list-group-item(ng-repeat="message in messages track by $index")
                             span.label.label-default {{message.username}}
                             span {{message.content}}
-
-
+                            span.badge {{message.time | date: 'yyyy/MM/dd HH:mm:ss'}}
+            //使用者列表
             div.user-pool
                 ul.list-group
                     li.list-group-item 線上使用者
+                        span.badge {{users.length}}
                     li.list-group-item(ng-repeat="user in users track by $index")
                         a(href, ng-click="messageData.username=user.username") {{user.username}}
-
-
-
 
 block scripts
     script.
         angular.module('app')
-                .directive('formValidationLabel', [function() {
+                .directive('formValidationLabel', [function () {
                     return {
                         restrict: 'E',
                         replace: true,
-                        template: '<span class="label label-danger" ng-show="(form[field].$touched||form.$submitted)&&form[field].$error">{{message}}</span>',
+                        template: '<span class="label label-danger" ng-show="(form[field].$touched||form.$submitted)&&form[field].$invalid">{{message}}</span>',
                         scope: {
                             form: '=',
                             field: '@',
@@ -89,7 +88,7 @@ block scripts
                     $scope.progress = ngProgressFactory.createInstance();
 
                     $scope.login = function () {
-                        if($scope.loginForm.$invalid) return;
+                        if ($scope.loginForm.$invalid) return;
 
                         $scope.progress.start();
 
@@ -101,6 +100,8 @@ block scripts
                                     $scope.join();
                                     $scope.currentUsername = $scope.model.username;
                                     $scope.model = {};
+                                    $scope.loginForm.$setPristine();
+                                    $scope.loginForm.$setUntouched();
                                 }, function (e) {
                                     $scope.progress.complete();
 
@@ -109,22 +110,28 @@ block scripts
                     };
 
                     $scope.onlineChange = function () {
-                        $http.get('/user/online').then(function(result) {
+                        $http.get('/user/online').then(function (result) {
                             $scope.users = result.data;
                         });
                     };
 
-                    $scope.to = function() {
-                        if($scope.messageForm.$invalid) return;
+                    $scope.to = function () {
+                        if ($scope.messageForm.$invalid) return;
+
+                        $scope.messageData.time = new Date();
 
                         socket.emit('message', $scope.messageData);
 
                         $scope.messages.unshift({
                             username: $scope.currentUsername,
-                            content: $scope.messageData.content
+                            content: $scope.messageData.content,
+                            time: $scope.messageData.time
                         });
 
                         $scope.messageData.content = null;
+
+                        $scope.messageForm.$setPristine();
+                        $scope.messageForm.$setUntouched();
                     };
 
                     $scope.join = function () {
@@ -135,37 +142,37 @@ block scripts
                         console.log('connect');
                     });
 
-                    socket.on('reconnect', function() {
+                    socket.on('reconnect', function () {
                         console.log('reconnect');
                     });
 
-                    socket.on('disconnect', function() {
+                    socket.on('disconnect', function () {
                         console.log('disconnect');
-                        $scope.$apply(function() {
+                        $scope.$apply(function () {
                             $scope.loggedIn = false;
                         });
                     });
 
-                    socket.on('onlineChange', function() {
-                        $scope.$apply(function() {
+                    socket.on('onlineChange', function () {
+                        $scope.$apply(function () {
                             $scope.onlineChange();
                         });
                     });
 
-                    socket.on('accessFailure', function(data) {
+                    socket.on('accessFailure', function (data) {
                         alert(data.message);
-                        $scope.$apply(function() {
+                        $scope.$apply(function () {
                             $scope.loggedIn = false;
                         });
                     });
 
-                    socket.on('message', function(data) {
+                    socket.on('message', function (data) {
                         $scope.$apply(function () {
                             $scope.messages.unshift(data);
                         });
                     });
 
-                    socket.on('messageFailure', function(data) {
+                    socket.on('messageFailure', function (data) {
                         alert(data.message);
                     });
 

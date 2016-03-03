@@ -47,6 +47,13 @@ module.exports = function (server) {
         });
 
         socket.on('message', function (data) {
+            var message = {
+                username: socket.user.username,
+                content: data.content,
+                time: data.time,
+                private: false
+            };
+
             if (data.username) {
                 User.findOne({
                     username: data.username
@@ -54,12 +61,9 @@ module.exports = function (server) {
                     if (user && user.online) {
                         try {
                             var pm = io.to(user.sid);
-
-                            pm.emit('message', {
-                                username: socket.user.username,
-                                content: data.content
-                            });
-                        } catch(ex) {
+                            message.private = true;
+                            pm.emit('message', message);
+                        } catch (ex) {
                             console.log(ex, io);
                         }
                     } else {
@@ -69,10 +73,7 @@ module.exports = function (server) {
                     }
                 });
             } else {
-                socket.broadcast.emit('message', {
-                    username: socket.user.username,
-                    content: data.content
-                });
+                socket.broadcast.emit('message', message);
             }
         });
     });
