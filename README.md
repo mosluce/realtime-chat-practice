@@ -11,6 +11,8 @@ Frontend: AngularJS + Jade
     - 留言加入日期 (√)
     - 重新整理不用重新登入 (√)
     - 保留一個小時以內的聊天記錄 (√)
+    - 自己發的訊息靠右
+    - 在Tab中顯示未讀訊息
 4. 群組聊天
 5. 傳檔案
 6. HTML5 Notification
