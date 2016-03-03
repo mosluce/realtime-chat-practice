@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    div.container(ng-controller="ChatCtrl")
+    div.container(ng-controller="ChatCtrl", ng-init="init()")
         div.row
             div.col-sm-12
                 h2.page-header 無責任聊天室
         //Login Form
-        div.row.login-form(ng-show="!loggedIn")
+        div.row.login-form(ng-show="!loggedIn&&initialized")
             div.col-sm-4.col-sm-push-4
                 form(novalidate, name="loginForm", ng-submit="login()")
                     form-validation-label(message="requiredMessage", form="loginForm", field="username")
@@ -76,6 +76,7 @@ block scripts
                 .controller('ChatCtrl', ['$scope', '$http', 'ngProgressFactory', function ($scope, $http, ngProgressFactory) {
                     var socket = io();
 
+                    $scope.initialized = false;
                     $scope.currentUsername = null;
                     $scope.loggedIn = false;
                     $scope.model = {};
@@ -86,6 +87,23 @@ block scripts
                     $scope.messageForm = null;
                     $scope.requiredMessage = "必填";
                     $scope.progress = ngProgressFactory.createInstance();
+
+                    $scope.init = function () {
+                        var promise = $http.get('/user/me');
+
+                        promise.then(function (result) {
+                            console.log(result);
+                            $scope.model = result.data;
+                            $scope.join();
+                            $scope.currentUsername = $scope.model.username;
+                            $scope.loggedIn = true;
+                            $scope.initialized = true;
+                            $scope.model = {};
+                        }, function () {
+                            $scope.loggedIn = false;
+                            $scope.initialized = true;
+                        });
+                    };
 
                     $scope.login = function () {
                         if ($scope.loginForm.$invalid) return;
@@ -174,6 +192,10 @@ block scripts
 
                     socket.on('messageFailure', function (data) {
                         alert(data.message);
+                    });
+
+                    socket.on('history', function(messages) {
+                        $scope.messages = messages;
                     });
 
                 }]);

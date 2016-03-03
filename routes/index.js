@@ -33,6 +33,9 @@ router.post('/user/login', function (req, res, next) {
                         if (err) return reject(err);
 
                         if (result) {
+                            req.session.user = {
+                                username: user.username
+                            };
                             resolve();
                         } else {
                             reject({
@@ -50,7 +53,10 @@ router.post('/user/login', function (req, res, next) {
 
                             data.password = hash;
 
-                            User.create(data).then(function () {
+                            User.create(data).then(function (user) {
+                                req.session.user = {
+                                    username: user.username
+                                };
                                 resolve();
                             });
                         });
@@ -71,8 +77,6 @@ router.post('/user/login', function (req, res, next) {
             res.status(500);
             res.send(ex);
         });
-
-
 });
 
 /**
@@ -85,6 +89,18 @@ router.get('/user/online', function (req, res, next) {
         .then(function (users) {
             res.send(users);
         });
+});
+
+/**
+ * GET SESSION
+ */
+router.get('/user/me', function (req, res, next) {
+    if (req.session.user) return res.send(req.session.user);
+
+    res.status(400);
+    res.send({
+        message: 'unauthorized'
+    });
 });
 
 module.exports = router;

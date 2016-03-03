@@ -2,315 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99c15a60-2b48-481d-ba62-1a3187218325" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ar-ma.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ar-sa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ar-tn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/az.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/be.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/bn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/bo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/bs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/cv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/de-at.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/dv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/en-au.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/en-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/en-ie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/en-nz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/fo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/fr-ch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/fy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/gd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/hy-am.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/jv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ka.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/kk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/lb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/lo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/me.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/mr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ms-my.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/my.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ne.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/nn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/se.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/sr-cyrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/sw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/ta.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/te.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/tl-ph.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/tlh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/tzl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/tzm-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/tzm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/uz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/locale/zh-tw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/min/locales.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/min/locales.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/min/moment-with-locales.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/min/moment-with-locales.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/min/moment.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/min/tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/check-overflow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/date-from-array.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/from-anything.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/from-array.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/from-object.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/from-string-and-array.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/from-string-and-format.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/from-string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/local.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/parsing-flags.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/utc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/create/valid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/abs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/add-subtract.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/as.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/bubble.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/constructor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/create.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/duration.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/get.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/humanize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/iso-string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/duration/prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/format/format.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/constructor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/formats.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/invalid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/lists.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/locale.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/locales.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/ordinal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/pre-post-format.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/relative.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/locale/set.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/add-subtract.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/clone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/compare.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/constructor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/creation-data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/diff.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/format.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/from.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/get-set.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/locale.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/min-max.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/now.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/prototype.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/start-end-of.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/to-type.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/to.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/moment/valid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/parse/regex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/parse/token.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/aliases.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/constants.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/day-of-month.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/day-of-week.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/day-of-year.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/hour.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/millisecond.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/minute.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/month.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/offset.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/quarter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/second.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/timestamp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/timezone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/units.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/week-calendar-utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/week-year.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/week.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/units/year.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/abs-ceil.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/abs-floor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/compare-arrays.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/defaults.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/deprecate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/extend.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/has-own-prop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/hooks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/is-array.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/is-date.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/is-function.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/is-undefined.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/to-int.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/lib/utils/zero-fill.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/af.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ar-ma.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ar-sa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ar-tn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/az.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/be.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/bg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/bn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/bo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/bs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/cs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/cv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/cy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/de-at.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/dv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/en-au.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/en-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/en-gb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/en-ie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/en-nz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/eo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/et.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/eu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/fa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/fo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/fr-ca.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/fr-ch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/fy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/gd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/gl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/he.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/hi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/hr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/hy-am.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/is.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ja.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/jv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ka.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/kk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/km.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/lb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/lo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/lt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/lv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/me.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/mk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/mr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ms-my.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/my.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/nb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ne.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/nl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/nn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/pl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/pt-br.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/se.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/si.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/sk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/sl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/sq.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/sr-cyrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/sr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/sw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/ta.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/te.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/th.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/tl-ph.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/tlh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/tzl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/tzm-latn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/tzm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/uk.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/uz.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/vi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/zh-cn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/locale/zh-tw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/src/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/templates/amd-named.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/templates/amd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/templates/default.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/templates/globals.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/templates/locale-header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bower/moment/templates/test-header.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/models/meesage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/database.js" afterPath="$PROJECT_DIR$/libs/database.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socket.io.js" afterPath="$PROJECT_DIR$/socket.io.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
     </list>
     <ignored path="play-chat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -331,80 +30,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="socket.io.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socket.io.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="94" column="14" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7356077">
-              <caret line="133" column="42" selection-start-line="133" selection-start-column="42" selection-end-line="133" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="192" column="65" selection-start-line="192" selection-start-column="65" selection-end-line="192" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7586207">
-              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.54389316">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.541666">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <file leaf-file-name="meesage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/models/meesage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-              <folding />
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/models/user.js">
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/database.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -414,18 +112,19 @@
       <list>
         <option value="$PROJECT_DIR$/.bowerrc" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/libs/database.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/libs/models/user.js" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/socket.io.js" />
         <option value="$PROJECT_DIR$/public/css/style.scss" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/libs/database.js" />
+        <option value="$PROJECT_DIR$/libs/models/meesage.js" />
+        <option value="$PROJECT_DIR$/socket.io.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -510,7 +209,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -527,8 +226,18 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bower" />
+              <option name="myItemId" value="play-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="play-chat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,41 +251,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="libs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="play-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="play-chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="min" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -684,9 +363,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21380244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21380244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32746956" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32746956" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991881" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -771,14 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79957354">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.86353946">
@@ -811,38 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socket.io.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.541666">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38379532">
@@ -851,10 +490,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/models/user.js">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2238806">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/models/meesage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3254973">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="192" column="65" selection-start-line="192" selection-start-column="65" selection-end-line="192" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="14" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket.io.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -864,16 +561,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7586207">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7356077">
-          <caret line="133" column="42" selection-start-line="133" selection-start-column="42" selection-end-line="133" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.54389316">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding />
         </state>
       </provider>

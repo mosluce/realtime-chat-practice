@@ -37,6 +37,16 @@ module.exports = function (server) {
                         user.online = true;
                         user.save().then(function () {
                             io.emit('onlineChange');
+
+                            Message.find({
+                                $or: [{
+                                    to: user.username
+                                }, {
+                                    to: null
+                                }]
+                            }).sort('-time').exec().then(function(messages) {
+                                socket.emit('history', messages);
+                            });
                         });
                     } else {
                         socket.emit('accessFailure', {
@@ -62,6 +72,11 @@ module.exports = function (server) {
                         try {
                             var pm = io.to(user.sid);
                             message.private = true;
+                            message.to = user.username;
+                            message.sid = user.sid;
+
+                            Message.create(message);
+
                             pm.emit('message', message);
                         } catch (ex) {
                             console.log(ex, io);
@@ -73,8 +88,19 @@ module.exports = function (server) {
                     }
                 });
             } else {
+                Message.create(message);
                 socket.broadcast.emit('message', message);
             }
+
+            //刪除超過四個小時的資料
+            var expires = new Date();
+            expires.setHours(expires.getHours() - 1);
+
+            Message.remove({
+                time: {
+                    $lt: expires
+                }
+            }).exec();
         });
     });
 };

@@ -15,6 +15,7 @@
     "express": "~4.13.1",
     "express-session": "^1.13.0",
     "jade": "~1.11.0",
+    "moment": "^2.11.2",
     "mongoose": "^4.4.5",
     "mongoose-timestamp": "^0.5.0",
     "morgan": "~1.6.1",

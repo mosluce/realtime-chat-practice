@@ -17,6 +17,7 @@ exports.connect = function() {
         conn.on('connected', function () {
             console.log('Mongoose default connection open to ' + url);
 
+            //載入所有model設定
             var files = fs.readdirSync(path.join(__dirname, 'models'));
 
             files.forEach(function(file) {
