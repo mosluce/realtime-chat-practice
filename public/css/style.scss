@@ -1,0 +1,32 @@
+
+$user-pool-size: 250px;
+
+.chat-wall {
+    position: relative;
+}
+
+.user-pool {
+    width: $user-pool-size;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.message-pool {
+    margin-right: $user-pool-size + 16;
+
+    .page-header {
+        margin-top: 16px;
+    }
+}
+
+.message-box {
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    height: 400px;
+    overflow-y: auto;
+
+    .label {
+        margin-right: 8px;
+    }
+}

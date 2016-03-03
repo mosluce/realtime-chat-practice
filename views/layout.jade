@@ -3,15 +3,17 @@ html
     head
         title= title
         link(rel="stylesheet", href="/bower/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/bower/ui-select/dist/select.css")
         link(rel="stylesheet", href="/css/style.css")
         script(src="/socket.io/socket.io.js")
         script(src="/bower/angular/angular.min.js")
+        script(src="/bower/angular-sanitize/angular-sanitize.min.js")
+        script(src="/bower/ui-select/dist/select.js")
         script.
             (function () {
-                var app = angular.module('app', []);
+                var app = angular.module('app', ['ui.select', 'ngSanitize']);
             })();
     body(ng-app="app")
-        div.container
-            block content
+        block content
 
         block scripts

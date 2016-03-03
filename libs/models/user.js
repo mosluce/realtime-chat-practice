@@ -2,13 +2,15 @@ var mongoose = require('mongoose');
 var timestamps = require('mongoose-timestamp');
 var Schema = mongoose.Schema;
 
-var name = 'User';
 var schema = new Schema({
-    username: String
+    username: String,
+    password: String,
+    online: Boolean,
+    sid: String
 }, {/*options*/});
 
 schema.plugin(timestamps);
 
 module.exports = function (conn) {
-    global[name] = conn.model(name, schema);
+    global.User = conn.model('User', schema);
 };

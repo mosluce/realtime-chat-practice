@@ -1,9 +1,11 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var plumber = require('gulp-plumber');
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     gulp.src('public/css/*.scss')
+        .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 version'],
@@ -12,14 +14,14 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.run('sass');
 
-    gulp.watch('public/css/*.scss', function() {
+    gulp.watch('public/css/*.scss', function () {
         gulp.run('sass');
     });
 });
 
-gulp.task('default', function() {
+gulp.task('default', function () {
     gulp.run('watch');
 });

@@ -1,9 +1,138 @@
 extends layout
 
 block content
-    div.row.
-        I am thinking...
+    div.container(ng-controller="ChatCtrl")
+        div.row
+            div.col-sm-12
+                h2.page-header 無責任聊天室
+        //Login Form
+        div.row.login-form(ng-show="!loggedIn")
+            div.col-sm-4.col-sm-push-4
+                form(novalidate, name="form", ng-submit="login()")
+                    div.form-group.input-group
+                        span.input-group-addon 帳號
+                        input.form-control(type="username", ng-model="model.username", placeholder="聊天用暱稱")
+                    div.form-group.input-group
+                        span.input-group-addon 密碼
+                        input.form-control(type="password", ng-model="model.password", placeholder="密碼")
+                    div.form-group.clearfix
+                        button.btn.btn-default.pull-right(type="submit") 登入
+        //ChatView
+        div.chat-wall(ng-show="loggedIn")
+            div.message-pool
+                div.page-header
+                    div
+                        span.label.label-info 登入名稱: {{currentUsername}}
+                    form(novalidate, name="messageForm", ng-submit="to()")
+                        div.form-group.input-group
+                            span.input-group-addon 輸入訊息
+                            input.form-control(type="text", ng-model="messageData.content", required, placeholder="輸入訊息")
+                            span.input-group-btn
+                                button.btn.btn-default
+                                    i.glyphicon.glyphicon-send
+                        div.form-group.input-group
+                            span.input-group-addon 密語對象
+                            ui-select.form-group(ng-model="messageData.username")
+                                ui-select-match(allow-clear="true", placeholder="選擇對話對象") {{$select.selected.username}}
+                                ui-select-choices(repeat="user.username as user in users") {{user.username}}
+
+                div.message-box
+                    ul.list-group
+                        li.list-group-item(ng-repeat="message in messages track by $index")
+                            span.label.label-default {{message.username}}
+                            span {{message.content}}
+
+
+            div.user-pool
+                ul.list-group
+                    li.list-group-item 線上使用者
+                    li.list-group-item(ng-repeat="user in users track by $index") {{user.username}}
+
+
+
 
 block scripts
+    script.
+        angular.module('app')
+                .controller('ChatCtrl', ['$scope', '$http', function ($scope, $http) {
+                    var socket = io();
 
+                    $scope.currentUsername = null;
+                    $scope.loggedIn = false;
+                    $scope.model = {};
+                    $scope.users = [];
+                    $scope.messageData = {};
+                    $scope.messages = [];
 
+                    $scope.login = function () {
+                        $http.post('/user/login', $scope.model)
+                                .then(function () {
+                                    $scope.loggedIn = true;
+                                    $scope.join();
+                                    $scope.currentUsername = $scope.model.username;
+                                    $scope.model = {};
+                                }, function (e) {
+                                    alert(e.data.message);
+                                });
+                    };
+
+                    $scope.onlineChange = function () {
+                        $http.get('/user/online').then(function(result) {
+                            $scope.users = result.data;
+                        });
+                    };
+
+                    $scope.to = function() {
+                        socket.emit('message', $scope.messageData);
+
+                        $scope.messages.unshift({
+                            username: $scope.currentUsername,
+                            content: $scope.messageData.content
+                        });
+
+                        $scope.messageData.content = null;
+                    };
+
+                    $scope.join = function () {
+                        socket.emit('join', {username: $scope.model.username});
+                    };
+
+                    socket.on('connect', function () {
+                        console.log('connect');
+                    });
+
+                    socket.on('reconnect', function() {
+                        console.log('reconnect');
+                    });
+
+                    socket.on('disconnect', function() {
+                        console.log('disconnect');
+                        $scope.$apply(function() {
+                            $scope.loggedIn = false;
+                        });
+                    });
+
+                    socket.on('onlineChange', function() {
+                        $scope.$apply(function() {
+                            $scope.onlineChange();
+                        });
+                    });
+
+                    socket.on('accessFailure', function(data) {
+                        alert(data.message);
+                        $scope.$apply(function() {
+                            $scope.loggedIn = false;
+                        });
+                    });
+
+                    socket.on('message', function(data) {
+                        $scope.$apply(function () {
+                            $scope.messages.unshift(data);
+                        });
+                    });
+
+                    socket.on('messageFailure', function(data) {
+                        alert(data.message);
+                    });
+
+                }]);
