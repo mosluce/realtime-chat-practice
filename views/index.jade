@@ -115,7 +115,7 @@ block scripts
                     };
 
                     $scope.to = function() {
-                        if($scope.loginForm.$invalid) return;
+                        if($scope.messageForm.$invalid) return;
 
                         socket.emit('message', $scope.messageData);
 
