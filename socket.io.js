@@ -43,8 +43,11 @@ module.exports = function (server) {
                                     to: user.username
                                 }, {
                                     to: null
+                                }, {
+                                    username: user.username
                                 }]
                             }).sort('-time').exec().then(function(messages) {
+                                console.log(messages);
                                 socket.emit('history', messages);
                             });
                         });
@@ -70,6 +73,7 @@ module.exports = function (server) {
                 }).exec().then(function (user) {
                     if (user && user.online) {
                         try {
+                            console.log(user);
                             var pm = io.to(user.sid);
                             message.private = true;
                             message.to = user.username;

@@ -26,7 +26,27 @@ $user-pool-size: 250px;
     height: 400px;
     overflow-y: auto;
 
-    .label {
-        margin-right: 8px;
+    .mine {
+        text-align: right;
+
+        .username {
+            display: none;
+        }
+    }
+
+    .content {
+        padding: 8px;
+        border: 1px solid #888888;
+        width: auto;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 4px;
+    }
+    
+    .time {
+        margin-top: 4px;
+        background-color: transparent;
+        color: #999999;
+        text-align: right;
+        border-top: 1px solid #d8d8d8;
     }
 }

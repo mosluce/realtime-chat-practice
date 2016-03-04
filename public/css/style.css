@@ -17,5 +17,19 @@
   border-radius: 4px;
   height: 400px;
   overflow-y: auto; }
-  .message-box .label {
-    margin-right: 8px; }
+  .message-box .mine {
+    text-align: right; }
+    .message-box .mine .username {
+      display: none; }
+  .message-box .content {
+    padding: 8px;
+    border: 1px solid #888888;
+    width: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 4px; }
+  .message-box .time {
+    margin-top: 4px;
+    background-color: transparent;
+    color: #999999;
+    text-align: right;
+    border-top: 1px solid #d8d8d8; }
