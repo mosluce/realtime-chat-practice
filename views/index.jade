@@ -148,9 +148,11 @@ block scripts
                         socket.emit('message', $scope.messageData);
 
                         $scope.messages.unshift({
-                            username: $scope.currentUsername,
-                            content: $scope.messageData.content,
-                            time: $scope.messageData.time
+                            'username': $scope.currentUsername,
+                            'content': $scope.messageData.content,
+                            'time': $scope.messageData.time,
+                            'to': $scope.messageData.username,
+                            'private': !!$scope.messageData.username
                         });
 
                         $scope.messageData.content = null;
