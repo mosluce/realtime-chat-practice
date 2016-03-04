@@ -80,131 +80,152 @@ block scripts
                     }
 
                 }])
-                .controller('ChatCtrl', ['$scope', '$http', 'ngProgressFactory', function ($scope, $http, ngProgressFactory) {
-                    var socket = io();
+                .controller('ChatCtrl', ['$scope', '$http', 'ngProgressFactory', '$document', '$window',
+                    function ($scope, $http, ngProgressFactory, $document, $window) {
+                        var socket = io();
+                        var indoor = true;
+                        var badge = 0;
 
-                    $scope.initialized = false;
-                    $scope.currentUsername = null;
-                    $scope.loggedIn = false;
-                    $scope.model = {};
-                    $scope.users = [];
-                    $scope.messageData = {};
-                    $scope.messages = [];
-                    $scope.loginForm = null;
-                    $scope.messageForm = null;
-                    $scope.requiredMessage = "必填";
-                    $scope.progress = ngProgressFactory.createInstance();
+                        $scope.initialized = false;
+                        $scope.currentUsername = null;
+                        $scope.loggedIn = false;
+                        $scope.model = {};
+                        $scope.users = [];
+                        $scope.messageData = {};
+                        $scope.messages = [];
+                        $scope.loginForm = null;
+                        $scope.messageForm = null;
+                        $scope.requiredMessage = "必填";
+                        $scope.progress = ngProgressFactory.createInstance();
 
-                    $scope.init = function () {
-                        var promise = $http.get('/user/me');
+                        $scope.init = function () {
+                            var promise = $http.get('/user/me');
 
-                        promise.then(function (result) {
-                            console.log(result);
-                            $scope.model = result.data;
-                            $scope.join();
-                            $scope.currentUsername = $scope.model.username;
-                            $scope.loggedIn = true;
-                            $scope.initialized = true;
-                            $scope.model = {};
-                        }, function () {
-                            $scope.loggedIn = false;
-                            $scope.initialized = true;
+                            promise.then(function (result) {
+                                console.log(result);
+                                $scope.model = result.data;
+                                $scope.join();
+                                $scope.currentUsername = $scope.model.username;
+                                $scope.loggedIn = true;
+                                $scope.initialized = true;
+                                $scope.model = {};
+                            }, function () {
+                                $scope.loggedIn = false;
+                                $scope.initialized = true;
+                            });
+                        };
+
+                        $scope.login = function () {
+                            if ($scope.loginForm.$invalid) return;
+
+                            $scope.progress.start();
+
+                            $http.post('/user/login', $scope.model)
+                                    .then(function () {
+                                        $scope.progress.complete();
+
+                                        $scope.loggedIn = true;
+                                        $scope.join();
+                                        $scope.currentUsername = $scope.model.username;
+                                        $scope.model = {};
+                                        $scope.loginForm.$setPristine();
+                                        $scope.loginForm.$setUntouched();
+                                    }, function (e) {
+                                        $scope.progress.complete();
+
+                                        alert(e.data.message);
+                                    });
+                        };
+
+                        $scope.onlineChange = function () {
+                            $http.get('/user/online').then(function (result) {
+                                $scope.users = result.data;
+                            });
+                        };
+
+                        $scope.to = function () {
+                            if ($scope.messageForm.$invalid) return;
+
+                            $scope.messageData.time = new Date();
+
+                            socket.emit('message', $scope.messageData);
+
+                            $scope.messages.unshift({
+                                'username': $scope.currentUsername,
+                                'content': $scope.messageData.content,
+                                'time': $scope.messageData.time,
+                                'to': $scope.messageData.username,
+                                'private': !!$scope.messageData.username
+                            });
+
+                            $scope.messageData.content = null;
+
+                            $scope.messageForm.$setPristine();
+                            $scope.messageForm.$setUntouched();
+                        };
+
+                        $scope.join = function () {
+                            socket.emit('join', {username: $scope.model.username});
+                        };
+
+                        $window.onfocus = function () {
+                            badge = 0;
+                            indoor = true;
+                            $scope.$apply(function() {
+                                $document[0].title = "無聊";
+                            });
+                        };
+
+                        $window.onblur = function () {
+                            indoor = false;
+                        };
+
+                        socket.on('connect', function () {
+                            console.log('connect');
                         });
-                    };
 
-                    $scope.login = function () {
-                        if ($scope.loginForm.$invalid) return;
-
-                        $scope.progress.start();
-
-                        $http.post('/user/login', $scope.model)
-                                .then(function () {
-                                    $scope.progress.complete();
-
-                                    $scope.loggedIn = true;
-                                    $scope.join();
-                                    $scope.currentUsername = $scope.model.username;
-                                    $scope.model = {};
-                                    $scope.loginForm.$setPristine();
-                                    $scope.loginForm.$setUntouched();
-                                }, function (e) {
-                                    $scope.progress.complete();
-
-                                    alert(e.data.message);
-                                });
-                    };
-
-                    $scope.onlineChange = function () {
-                        $http.get('/user/online').then(function (result) {
-                            $scope.users = result.data;
-                        });
-                    };
-
-                    $scope.to = function () {
-                        if ($scope.messageForm.$invalid) return;
-
-                        $scope.messageData.time = new Date();
-
-                        socket.emit('message', $scope.messageData);
-
-                        $scope.messages.unshift({
-                            'username': $scope.currentUsername,
-                            'content': $scope.messageData.content,
-                            'time': $scope.messageData.time,
-                            'to': $scope.messageData.username,
-                            'private': !!$scope.messageData.username
+                        socket.on('reconnect', function () {
+                            console.log('reconnect');
                         });
 
-                        $scope.messageData.content = null;
-
-                        $scope.messageForm.$setPristine();
-                        $scope.messageForm.$setUntouched();
-                    };
-
-                    $scope.join = function () {
-                        socket.emit('join', {username: $scope.model.username});
-                    };
-
-                    socket.on('connect', function () {
-                        console.log('connect');
-                    });
-
-                    socket.on('reconnect', function () {
-                        console.log('reconnect');
-                    });
-
-                    socket.on('disconnect', function () {
-                        console.log('disconnect');
-                        $scope.$apply(function () {
-                            $scope.loggedIn = false;
+                        socket.on('disconnect', function () {
+                            console.log('disconnect');
+                            $scope.$apply(function () {
+                                $scope.loggedIn = false;
+                            });
                         });
-                    });
 
-                    socket.on('onlineChange', function () {
-                        $scope.$apply(function () {
-                            $scope.onlineChange();
+                        socket.on('onlineChange', function () {
+                            $scope.$apply(function () {
+                                $scope.onlineChange();
+                            });
                         });
-                    });
 
-                    socket.on('accessFailure', function (data) {
-                        alert(data.message);
-                        $scope.$apply(function () {
-                            $scope.loggedIn = false;
+                        socket.on('accessFailure', function (data) {
+                            alert(data.message);
+                            $scope.$apply(function () {
+                                $scope.loggedIn = false;
+                            });
                         });
-                    });
 
-                    socket.on('message', function (data) {
-                        $scope.$apply(function () {
-                            $scope.messages.unshift(data);
+                        socket.on('message', function (data) {
+                            if (!indoor) {
+                                badge++;
+                            }
+
+                            $scope.$apply(function () {
+                                $scope.messages.unshift(data);
+                                $document[0].title = "無聊 (" + badge + ")";
+                            });
                         });
-                    });
 
-                    socket.on('messageFailure', function (data) {
-                        alert(data.message);
-                    });
+                        socket.on('messageFailure', function (data) {
+                            alert(data.message);
+                        });
 
-                    socket.on('history', function(messages) {
-                        $scope.messages = messages;
-                    });
+                        socket.on('history', function (messages) {
+                            $scope.messages = messages;
+                        });
 
-                }]);
+
+                    }]);
