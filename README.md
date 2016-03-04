@@ -1,4 +1,4 @@
-# realtime-chat-practice
+# 即時聊天系統練習
 
 ## Frameworks
 Backend: Node.js + Socket.io
