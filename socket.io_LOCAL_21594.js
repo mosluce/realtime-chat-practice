@@ -75,8 +75,6 @@ module.exports = function (server) {
                                     to: user.username
                                 }, {
                                     to: null
-                                }, {
-                                    username: user.username
                                 }]
                             }).sort('-time').exec().then(function (messages) {
                                 socket.emit('history', messages);

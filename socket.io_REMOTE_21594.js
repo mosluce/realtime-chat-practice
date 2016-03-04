@@ -1,40 +1,8 @@
 var db = require('./libs/database');
 
-function clearGhost(io) {
-    //從資料庫清除現在不在線上的 client
-    if (typeof User !== 'undefined') {
-        var sids = [];
-
-        for (var sid in io.sockets.connected) {
-            sids.push(sid);
-        }
-
-        User.update({
-            sid: {
-                $nin: sids
-            }
-        }, {
-            online: false,
-            sid: null
-        }, { multi: true }).exec().then(function () {
-            io.emit('onlineChange');
-        }, console.log);
-    } else {
-        return setTimeout(function () {
-            clearGhost(io);
-        }, 1000);
-    }
-
-    setTimeout(function () {
-        clearGhost(io);
-    }, 1000 * 60 * 10);
-}
-
 module.exports = function (server) {
     var io = require('socket.io')(server);
     var mongo = require('socket.io-adapter-mongo');
-
-    clearGhost(io);
 
     io.adapter(mongo(db.MongoURL));
 
@@ -78,7 +46,8 @@ module.exports = function (server) {
                                 }, {
                                     username: user.username
                                 }]
-                            }).sort('-time').exec().then(function (messages) {
+                            }).sort('-time').exec().then(function(messages) {
+                                console.log(messages);
                                 socket.emit('history', messages);
                             });
                         });
@@ -104,6 +73,7 @@ module.exports = function (server) {
                 }).exec().then(function (user) {
                     if (user && user.online) {
                         try {
+                            console.log(user);
                             var pm = io.to(user.sid);
                             message.private = true;
                             message.to = user.username;

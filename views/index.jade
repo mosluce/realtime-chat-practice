@@ -45,10 +45,17 @@ block content
                 //訊息列
                 div.message-box
                     ul.list-group
-                        li.list-group-item(ng-repeat="message in messages track by $index")
-                            span.label.label-default {{message.username}}
-                            span {{message.content}}
-                            span.badge {{message.time | date: 'yyyy/MM/dd HH:mm:ss'}}
+                        li.list-group-item(ng-repeat="message in messages track by $index", ng-class="{mine: message.username===currentUsername}")
+                            div.list-group-item-text
+                                div.label.label-default.username(ng-class="{'label-danger': message.private}")
+                                    span {{message.username}}
+                                    span(ng-show="message.private")
+                                        i.glyphicon.glyphicon-arrow-right
+                                div.label.label-primary.to(ng-show="message.to && message.to!=currentUsername")
+                                    i.glyphicon.glyphicon-arrow-right
+                                    | {{message.to}}
+                                div.content {{message.content}}
+                                    div.time {{message.time | date: 'yyyy/MM/dd HH:mm:ss'}}
             //使用者列表
             div.user-pool
                 ul.list-group
